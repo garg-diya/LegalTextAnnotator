@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Users Logs</title>
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Bulma Extensions CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css\dashboard.css">
+    <link rel="stylesheet" href="css\toppage.css">
+    <link rel="stylesheet" href="css\tables.css">
+
+  </head>
+
+  <body class="has-background-white">
+
+    <a id="topArrow" href="#top"><span class="icon is-large">
+        <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+      </span></a>
+
+    <header>
+      <nav class="navbar has-shadow">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+              <img src="images/Lta.png" alt="Logo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+              <a class="navbar-item" href="index.html">Home</a>
+              <a class="navbar-item" href="aboutus.html">About Us</a>
+              <a class="navbar-item" href="annotations.html">Annotations</a>
+              <a class="navbar-item has-text-weight-bold" href="dashboardadmin.html">Dashboard</a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-light">LOGOUT<i class="material-icons" aria-hidden="true">exit_to_app</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="side-bar-container block">
+      <section class="side-bar has-background-white mt-1 mb-0 ml-1 mr-1">
+        <nav class="is-info">
+          <p class="panel-heading has-background-info has-text-white">
+            Menu
+          </p>
+          <a class="panel-block" href="dashboardadmin.html">
+            <span class="panel-icon">
+              <i class="material-icons" aria-hidden="true">person_outline</i>
+            </span>
+            Profile
+          </a>
+          <a class="panel-block is-active has-text-weight-bold has-text-info" href="usersadmin.html">
+            <span class="panel-icon">
+              <i class="fa fas fa-users" aria-hidden="true"></i>
+            </span>
+            Users Log
+          </a>
+          <a class="panel-block" href="docsadmin.html">
+            <span class="panel-icon">
+              <i class="fa fas fa-file" aria-hidden="true"></i>
+            </span>
+            Documents Log
+          </a>
+          <a class="panel-block" href="activityadmin.html">
+            <span class="panel-icon">
+              <i class="material-icons" aria-hidden="true">sort</i>
+            </span>
+            Statistics
+          </a>
+        </nav>
+      </section>
+
+      <article class="content-area ">
+        <article class="container">
+          <section class="block">
+            <section class="hero has-background-info mt-1 ml-1 mr-1 mb-0">
+              <nav class="level">
+                <div class="level-left">
+                  <p class="panel-heading has-background-info has-text-white">
+                    Users Log
+                  </p>
+                </div>
+
+                <div class="level-right">
+                  <div class="control has-icons-left mr-1">
+                    <div class="select">
+                      <select>
+                        <option disabled selected hidden>Filter by..</option>
+                        <option>All Users</option>
+                        <option>Active Users</option>
+                        <option>Inactive Users</option>
+                        <option>Dormant Users</option>
+                        <option>Non-Dormant Users</option>
+                        <option>Top 10 Users</option>
+                      </select>
+                    </div>
+                    <div class="icon is-left">
+                      <i class="fa fas fa-filter"></i>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </section>
+          </section>
+
+          <article class="container is-fluid p-1">
+            <!-- USERS -->
+            <div class="card has-table">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="icon"><i class="mdi mdi-account-group"></i></span>
+                  EXPERTS
+                </p>
+                <a href="#" class="card-header-icon">
+                  <span class="icon"><i class="mdi mdi-reload"></i></span>
+                </a>
+              </header>
+
+              <div class="card-content">
+                <div class="b-table has-pagination">
+                  <div class="table-wrapper has-mobile-cards">
+                    <table class="table is-fullwidth is-striped is-hoverable has-text-left">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Paragraphs Alloted</th>
+                          <th>Paragraphs Labelled</th>
+                          <th>Paragraphs Modified</th>
+                          <th>Paragraphs Bypassed</th>
+                          <th>Total Labelling Time</th>
+                          <th>Average Labelling Time</th>
+                          <th>Minimum Labelling Time</th>
+                          <th>Maximum Labelling Time</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="is-checkbox-cell">
+                            <label class="b-checkbox checkbox">
+                              <input type="checkbox" value="false">
+                              <span class="check"></span>
+                            </label>
+                          </td>
+                          <td>1</td>
+                          <td data-label="Name">Lorum ipsum dolem aire</td>
+                          <td data-label="Paragraphs Alloted">10</td>
+                          <td data-label="Paragraphs Labelled">3</td>
+                          <td data-label="Paragraphs Modified">2</td>
+                          <td data-label="Paragraphs Bypassed">1</td>
+                          <td data-label="Total Labelling Time">10</td>
+                          <td data-label="Average Labelling Time">3</td>
+                          <td data-label="Minimum Labelling Time">2</td>
+                          <td data-label="Maximum Labelling Time">1</td>
+                          <td class="is-actions-cell">
+                            <div class="buttons is-right">
+                              <button class="button is-small is-primary" type="button">
+                                <span class="icon"><i class="mdi mdi-eye"></i></span>
+                              </button>
+                              <button class="button is-small is-danger jb-modal" data-target="sample-modal"
+                                type="button">
+                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Pagination Nav -->
+              <nav class="pagination is-centered mt-4" role="navigation" aria-label="pagination">
+                <a class="pagination-previous has-background-white">
+                  <span class="icon is-small">
+                    <i class="fa fas fa-chevron-left"></i>
+                  </span>
+                </a>
+                <a class="pagination-next has-background-white">
+                  <span class="icon is-small">
+                    <i class="fa fas fa-chevron-right"></i>
+                  </span>
+                </a>
+                <ul class="pagination-list">
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 1">1</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 45">45</a></li>
+                  <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 47">47</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 86">86</a></li>
+                </ul>
+              </nav>
+            </div>
+          </article>
+        </article>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>© 2022 Department of Computer Science, Delhi University</p>
+      </div>
+
+    </footer>
+
+
+
+    <script src="scripts\navbar.js"></script>
+    <script src="scripts\toparrowpage.js"></script>
+
+  </body>
+
+</html>

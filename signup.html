@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Sign Up</title>
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Icon Font Css -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css\toppage.css">
+
+    </head>
+
+    <body class="has-background-white">
+
+        <a id="topArrow" href="#top">
+            <span class="icon is-large">
+                <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+            </span>
+        </a>
+
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.html">
+                            <img src="images/Lta.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                            <a class="navbar-item" href="index.html">Home</a>
+                            <a class="navbar-item" href="aboutus.html">About Us</a>
+                            <a class="navbar-item" href="annotations.html">Annotations</a>
+                            <a class="navbar-item" href="dashboard.html">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero is-fullheight-with-navbar">
+            <div class="hero-body has-background">
+                <div class="container">
+                    <div class="columns is-centered is-vcentered">
+                        <div class="column is-one-third-widescreen is-7 is-12-mobile">
+                            <section class="box">
+                                <section class="section">
+                                    <h1 class="title">Register with LTA</h1>
+                                    <h6 class="subtitle">Create Account to Continue</h6>
+                                </section>
+                                <form action="#">
+                                    <div class="field">
+                                        <label class="label">E-Mail Address<span style="color:red;"> *</span></label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-envelope"></i>
+                                            </span>
+                                            <input class="input" type="email" name="email" placeholder="E-Mail Address"
+                                                autofocus="" required>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Name<span style="color:red;"> *</span></label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-user"></i>
+                                            </span>
+                                            <input class="input" type="text" name="name" placeholder="Name" autofocus=""
+                                                required>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Phone Number<span style="color:red;"> *</span></label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-phone"></i>
+                                            </span>
+                                            <input class="input" type="tel" name="contact" placeholder="Phone Number"
+                                                autofocus="" required>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Name of the Institution<span style="color:red;"> *</span></label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-university"></i>
+                                            </span>
+                                            <input class="input" type="text" name="institution"
+                                                placeholder="Institution" autofocus="">
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Registration Number<span style="color:red;"> *</span></label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-id-card"></i>
+                                            </span>
+                                            <input class="input" type="text" name="reg_number"
+                                                placeholder="Registration Number" autofocus="" required>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Password<span style="color:red;"> *</span></label>
+                                        <div class="field has-addons">
+                                            <div class="control is-expanded has-icons-left">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fa fas fa-key"></i>
+                                                </span>
+                                                <input class="input" type="password" name="password"
+                                                    placeholder="Password" id="password" autofocus="" required>
+                                            </div>
+                                            <div class="control">
+                                                <button class="button" data-visibility data-target="password">
+                                                    <span class="icon is-small">
+                                                        <i class="fa fas fa-eye"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Confirm Password<span style="color:red;"> *</span></label>
+                                        <div class="field has-addons">
+                                            <div class="control is-expanded has-icons-left">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fa fas fa-key"></i>
+                                                </span>
+                                                <input class="input" type="password" name="confirm_password"
+                                                    placeholder="Confirm Password" id="confirm_password" autofocus=""
+                                                    required>
+                                            </div>
+                                            <div class="control">
+                                                <button class="button" data-visibility data-target="confirm_password">
+                                                    <span class="icon is-small">
+                                                        <i class="fa fas fa-eye"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field mt-5">
+                                        <p class="control is-expanded">
+                                            <button class="button is-primary is-fullwidth">
+                                                SUBMIT
+                                            </button>
+                                        </p>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <p class="control">Already Registered?</p>
+                                        <p class="control">
+                                            <a href="login.html">Login</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+                <footer class="footer">
+                    <div class="content has-text-centered has-text-black">
+                        <p>
+                            © 2022 Department of Computer Science, Delhi University
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <script src="scripts/navbar.js"></script>
+        <script src="scripts/login_signup.js"></script>
+        <script src="scripts\toparrowpage.js"></script>
+
+    </body>
+
+</html>

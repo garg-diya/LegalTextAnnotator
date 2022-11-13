@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Paragraph</title>
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Bulma Extensions CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css" <!-- Icon
+            Font Css -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css\paragraphs.css">
+        <link rel="stylesheet" href="css\toppage.css">
+
+    </head>
+
+    <body class="has-background-white">
+
+        <a id="topArrow" href="#top">
+            <span class="icon is-large">
+                <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+            </span>
+        </a>
+
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.html">
+                            <img src="images/Lta.png" alt="Logo" />
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-start" style="flex-grow: 1; justify-content: center">
+                            <a class="navbar-item" href="index.html">Home</a>
+                            <a class="navbar-item" href="aboutus.html">About Us</a>
+                            <a class="navbar-item has-text-weight-bold" href="annotations.html">Annotations</a>
+                            <a class="navbar-item" href="dashboard.html">Dashboard</a>
+                        </div>
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-light">LOGOUT<i class="material-icons"
+                                            aria-hidden="true">exit_to_app</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero is-fullheight-with-navbar">
+            <div class="hero-body m-0 pb-0 pt-2">
+                <div class="container">
+                    <div class="columns is-justify-content-center">
+                        <div class="column has-text-centered">
+                            <div class="section-title">
+                                <!-- Modal HTML content(hidden by default) starts here -->
+                                <div class="modal p-2" id="modal1">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-card">
+                                        <header class="modal-card-head">
+                                            <p class="modal-card-title has-text-info-dark">Instructions</p>
+                                            <button class="delete" aria-label="close"></button>
+                                        </header>
+                                        <section class="modal-card-body has-text-left">
+                                            <b>Please read the instructions carefully:</b>
+                                            <ol class="pl-2">
+                                                <li>
+                                                    Instruction 1 will be written here. Read carefully. All other
+                                                    instructions will follow.
+                                                </li>
+                                                <li>
+                                                    Instruction 1 will be written here. Read carefully. All other
+                                                    instructions will follow.
+                                                </li>
+                                                <li>
+                                                    Instruction 1 will be written here. Read carefully. All other
+                                                    instructions will follow.
+                                                </li>
+                                                <li>
+                                                    Instruction 1 will be written here. Read carefully. All other
+                                                    instructions will follow.
+                                                </li>
+                                            </ol>
+                                        </section>
+                                    </div>
+                                </div>
+                                <!-- Modal button for trigger -->
+                                <button class="button is-text has-text-info has-text-weight-bold js-modal-trigger"
+                                    data-target="modal1">
+                                    Instructions
+                                </button>
+                            </div>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="section-title">
+                                <h2 class="mb-4 mt-2">
+                                    <b>Font Size</b>
+                                    <input type="range" min="1" max="40" />
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="section-title has-text-centered">
+                                <h2 class="mb-4 mt-2">
+                                    <span>🕒<b>Time Remaining:</b></span>
+                                    <span>00:00:00 mins</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tile is-ancestor ">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification has-background-success-light">
+                                    <p class="title">Your Paragraph Here</p>
+                                    <div class="content">
+                                        <p class="subtitle has-text-info">Details of the <a href="">Document</a></p>
+                                        <strong>Document Number: </strong><br>
+                                        <strong>Case Number: </strong><br>
+                                        <strong>Title: </strong><br>
+                                        <strong>Date of the Judgement: </strong><br>
+                                    </div>
+                                    <div class="content scrollable">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum."
+                                        <br>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum."
+                                        <br>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum."
+                                        <br>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum."
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child has-background-danger-light notification">
+                                <div class="content rows">
+                                    <div>
+                                        <p class="title is-3">Labels</p>
+                                        <p class="subtitle">You can select multiple labels</p>
+                                    </div>
+                                    <div id="labelcontainer" class="content is-fullheight">
+                                        <div class="checkitems">
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-1" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-1"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-2" class="is-checkradio is-info"
+                                                    name="labels" />
+                                                <label for="label-2"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-3" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-3"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-4" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-4"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-5" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-5"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-6" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-6"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-7" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-7"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-8" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-8"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-9" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-9"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-10" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-10"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-11" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-11"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                            <div class="checkitem">
+                                                <input type="checkbox" id="label-12" class="is-checkradio is-link"
+                                                    name="labels" />
+                                                <label for="label-12"><span
+                                                        class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                        data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buttons is-centered">
+                                        <button class="button is-primary js-modal-trigger" id="para_annotate"
+                                            data-target="paragraph1-modal">SUBMIT</button>
+                                        <button class="button is-light js-modal-trigger" id="para_annotate"
+                                            data-target="paragraph2-modal">SKIP</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="paragraph1-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <section class="modal-card-body has-text-centered">
+                                <div class="container is-fluid">
+                                    <b>Are you sure you want to submit?</b>
+                                    <footer class="modal-card-foot p-0 m-0 mt-5 has-background-white ">
+                                        <div class="field is-grouped is-grouped-centered mt-1">
+                                            <div class="control">
+                                                <button class="button is-primary js-modal-trigger" id="para_annotate"
+                                                    data-target="paragraph3-modal">YES</button>
+                                            </div>
+                                            <div class="control">
+                                                <button class="button">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="paragraph2-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <section class="modal-card-body has-text-centered">
+                                <div class="container is-fluid">
+                                    <b>Are you sure you want to skip?</b>
+                                    <footer class="modal-card-foot p-0 m-0 mt-5 has-background-white">
+                                        <div class="field is-grouped mt-1">
+                                            <div class="control">
+                                                <button class="button is-primary js-modal-trigger" id="para_annotate"
+                                                    data-target="paragraph4-modal">YES</button>
+                                            </div>
+                                            <div class="control">
+                                                <button class="button">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </footer>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="paragraph3-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-text-centered">
+                                <p class="modal-card-title has-text-success-dark has-text-weight-bold">Paragraph has
+                                    been labelled.</p>
+                            </header>
+
+                            <section class="modal-card-body has-text-centered">
+                                <div class="container is-fluid">
+                                    <b>Do you want to label next?</b>
+                                    <div class="field is-grouped is-grouped-centered mt-5">
+                                        <div class="control">
+                                            <a class="button is-primary" href="paragraphs.html">YES</a>
+                                        </div>
+
+                                        <div class="control">
+                                            <a class="button is-light" href="annotations.html">NO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="paragraph4-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-text-centered">
+                                <p class="modal-card-title has-text-info-dark has-text-weight-bold">Paragraph has been
+                                    bypassed.</p>
+                            </header>
+
+                            <section class="modal-card-body has-text-centered">
+                                <div class="container is-fluid">
+                                    <b>Do you want to label next?</b>
+                                    <div class="field is-grouped is-grouped-centered mt-5">
+                                        <div class="control">
+                                            <a class="button is-primary" href="paragraphs.html">YES</a>
+                                        </div>
+                                        <div class="control">
+                                            <a class="button is-light" href="annotations.html">NO</a>
+                                        </div>
+                                    </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+                <footer class="footer">
+                    <div class="content has-text-centered has-text-black">
+                        <p>© 2022 Department of Computer Science, Delhi University</p>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+        <script src="scripts\modal.js"></script>
+        <script src="scripts\navbar.js"></script>
+        <script src="scripts\toparrowpage.js"></script>
+
+    </body>
+
+</html>

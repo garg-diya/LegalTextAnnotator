@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Dashboard</title>
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Icon Font Css -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css\dashboard.css">
+        <link rel="stylesheet" href="css\toppage.css">
+
+    </head>
+
+    <body class="has-background-white">
+
+        <a id="topArrow" href="#top">
+            <span class="icon is-large">
+                <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+            </span>
+        </a>
+
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.html">
+                            <img src="images/Lta.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                            <a class="navbar-item" href="index.html">Home</a>
+                            <a class="navbar-item" href="aboutus.html">About Us</a>
+                            <a class="navbar-item" href="annotations.html">Annotations</a>
+                            <a class="navbar-item has-text-weight-bold" href="dashboard.html">Dashboard</a>
+                        </div>
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-light">LOGOUT<i class="material-icons"
+                                            aria-hidden="true">exit_to_app</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="side-bar-container block">
+            <section class="side-bar has-background-white mt-1 mb-0 ml-1 mr-1">
+                <nav class="is-info">
+                    <p class="panel-heading has-background-info has-text-white">
+                        Menu
+                    </p>
+                    <a class="panel-block is-active has-text-weight-bold has-text-info" href="dashboard.html">
+                        <span class="panel-icon">
+                            <i class="material-icons" aria-hidden="true">person_outline</i>
+                        </span>
+                        Profile
+                    </a>
+                    <a class="panel-block" href="tasks.html">
+                        <span class="panel-icon">
+                            <i class="fa fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        Tasks
+                    </a>
+                    <a class="panel-block" href="activity.html">
+                        <span class="panel-icon">
+                            <i class="material-icons" aria-hidden="true">sort</i>
+                        </span>
+                        Activity
+                    </a>
+                </nav>
+            </section>
+
+            <article class="content-area">
+                <article class="container">
+                    <section class="block">
+                        <section class="hero">
+                            <p class="panel-heading has-background-info has-text-white mt-1 ml-1 mr-1 mb-0"
+                                id="profile">
+                                My Profile
+                            </p>
+                        </section>
+                    </section>
+                    <section class="box mt-1 mb-0 ml-1 mr-1">
+                        <form action="#" method="POST">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <p class="control is-expanded has-icons-left">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fas fa-user"></i>
+                                    </span>
+                                    <input class="input is-static" type="text" name="name" placeholder="Name" readonly>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="label">Registration Number</label>
+                                <p class="control is-expanded has-icons-left">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fas fa-id-card"></i>
+                                    </span>
+                                    <input class="input is-static" type="text" name="reg_number"
+                                        placeholder="Registration Number" readonly>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="label">College / University / Department</label>
+                                <p class="control is-expanded has-icons-left">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fas fa-university"></i>
+                                    </span>
+                                    <input class="input is-static" type="text" name="association"
+                                        placeholder="College / University / Department" readonly>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="label">Designation</label>
+                                <p class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                    <select class="is-static" readonly disabled name="designation">
+                                        <option value="expert">Expert</option>
+                                        <option value="student" selected>Student</option>
+                                    </select>
+                                </div>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="label">Phone Number</label>
+                                <p class="control is-expanded has-icons-left">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fas fa-phone"></i>
+                                    </span>
+                                    <input class="input is-static" type="text" name="ph_num" placeholder="Mobile Number"
+                                        readonly>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label class="label">E-Mail Address</label>
+                                <p class="control is-expanded has-icons-left">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fas fa-envelope"></i>
+                                    </span>
+                                    <input class="input is-static" type="text" data-readonly="true"
+                                        placeholder="E-Mail Address" readonly>
+                                </p>
+                            </div>
+                            <div class="field is-grouped is-grouped-right is-grouped-multiline">
+                                <div class="control">
+                                    <button class="button is-primary" id="edit">Edit</button>
+                                </div>
+                                <div class="control">
+                                    <input type="reset" class="button is-light is-hidden" id="cancel" value="Cancel">
+                                </div>
+                                <div class="control">
+                                    <input type="submit" class="button is-primary is-hidden" id="save" hidden
+                                        value="Save">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-primary js-modal-trigger" id="change_passwd"
+                                        data-target="password-modal">Change Password</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </article>
+            </article>
+
+            <div class="modal" id="password-modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Change Current Password</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="container is-fluid">
+                            <form action="#" method="POST">
+                                <div class="field">
+                                    <label class="label">Current Password</label>
+                                    <div class="field has-addons">
+                                        <div class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-key"></i>
+                                            </span>
+                                            <input class="input" type="password" name="old_password"
+                                                placeholder="Current (Old) Password" id="old_password" required>
+                                        </div>
+                                        <div class="control">
+                                            <button class="button" data-visibility data-target="old_password">
+                                                <span class="icon is-small">
+                                                    <i class="fa fas fa-eye"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">New Password</label>
+                                    <div class="field has-addons">
+                                        <div class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-key"></i>
+                                            </span>
+                                            <input class="input" type="password" name="new_password"
+                                                placeholder="New Password" id="new_password" required>
+                                        </div>
+                                        <div class="control">
+                                            <button class="button" data-visibility data-target="new_password">
+                                                <span class="icon is-small">
+                                                    <i class="fa fas fa-eye"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Confirm New Password</label>
+                                    <div class="field has-addons">
+                                        <div class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-key"></i>
+                                            </span>
+                                            <input class="input" type="password" name="confirm_new_password"
+                                                placeholder="Confirm New Password" id="confirm_new_password" required>
+                                        </div>
+                                        <div class="control">
+                                            <button class="button" data-visibility data-target="confirm_new_password">
+                                                <span class="icon is-small">
+                                                    <i class="fa fas fa-eye"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-grouped is-grouped-right mt-5">
+                                    <div class="control">
+                                        <button class="button is-primary">
+                                            Change Password
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered has-text-black">
+                <p>© 2022 Department of Computer Science, Delhi University</p>
+            </div>
+        </footer>
+
+        <script src="scripts\modal.js"></script>
+        <script src="scripts\profile.js"></script>
+        <script src="scripts\navbar.js"></script>
+        <script src="scripts\toparrowpage.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Statistics</title>
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Icon Font Css -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css\dashboard.css">
+        <link rel="stylesheet" href="css\toppage.css">
+
+    </head>
+
+    <body class="has-background-white">
+
+        <a id="topArrow" href="#top">
+            <span class="icon is-large">
+                <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+            </span>
+        </a>
+
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.html">
+                            <img src="images/Lta.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                            <a class="navbar-item" href="index.html">Home</a>
+                            <a class="navbar-item" href="aboutus.html">About Us</a>
+                            <a class="navbar-item" href="annotations.html">Annotations</a>
+                            <a class="navbar-item has-text-weight-bold" href="dashboard.html">Dashboard</a>
+                        </div>
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-light">LOGOUT<i class="material-icons"
+                                            aria-hidden="true">exit_to_app</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="side-bar-container block">
+            <section class="side-bar has-background-white mt-1 mb-0 ml-1 mr-1">
+                <nav class="is-info">
+                    <p class="panel-heading has-background-info has-text-white">
+                        Menu
+                    </p>
+                    <a class="panel-block" href="dashboard.html">
+                        <span class="panel-icon">
+                            <i class="material-icons" aria-hidden="true">person_outline</i>
+                        </span>
+                        Profile
+                    </a>
+                    <a class="panel-block" href="tasks.html">
+                        <span class="panel-icon">
+                            <i class="fa fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        Tasks
+                    </a>
+                    <a class="panel-block is-active has-text-weight-bold has-text-info" href="activity.html">
+                        <span class="panel-icon">
+                            <i class="material-icons" aria-hidden="true">sort</i>
+                        </span>
+                        Activity
+                    </a>
+                </nav>
+            </section>
+
+            <article class="content-area">
+                <section class="block">
+                    <section class="hero">
+                        <p class="panel-heading has-background-info has-text-white mt-1 ml-1 mr-1 mb-0" id="profile">
+                            My Statistics
+                        </p>
+                    </section>
+                </section>
+                <article class="container is-fluid mt-1 ml-1 mr-1 mb-0">
+                    <section class="columns is-vcentered is-centered is-multiline mt-2">
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h1 class="has-text-weight-semibold is-size-5">Paragraphs Alloted</h1>
+                                    <h1 class="is-size-6">12</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h2 class="has-text-weight-semibold is-size-5">Paragraphs Labelled</h2>
+                                    <h1 class="is-size-6">12</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h2 class="has-text-weight-semibold is-size-5">Paragraphs Bypassed</h2>
+                                    <h1 class="is-size-6">12</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h2 class="has-text-weight-semibold is-size-5">Paragraphs Modified</h2>
+                                    <h1 class="is-size-6">12</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h1 class="has-text-weight-semibold is-size-5">Total Labelling Time</h1>
+                                    <h1 class="is-size-6">1 hr 12 mins</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h1 class="has-text-weight-semibold is-size-5">Average Labelling Time</h1>
+                                    <h1 class="is-size-6">1 hr 12 mins</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h1 class="has-text-weight-semibold is-size-5">Minimum Labelling Time</h1>
+                                    <h1 class="is-size-6">1 hr 12 mins</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-3-desktop is-3">
+                            <div class="card">
+                                <div class="card-content has-text-centered">
+                                    <h1 class="has-text-weight-semibold is-size-5">Maximum Labelling Time</h1>
+                                    <h1 class="is-size-6">1 hr 12 mins</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="columns is-vcentered is-centered is-multiline mt-6">
+                        <div class="column is-4-desktop">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-offset-2-desktop is-4-desktop">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </article>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered has-text-black">
+                <p>© 2022 Department of Computer Science, Delhi University</p>
+            </div>
+        </footer>
+
+        <script src="scripts\navbar.js"></script>
+        <script src="scripts\toparrowpage.js"></script>
+
+    </body>
+
+</html>

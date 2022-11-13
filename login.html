@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Login</title>
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Bulma Extensions CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css" />
+        <!-- Icon Font Css -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css\toppage.css">
+
+    </head>
+
+    <body class="has-background-white">
+
+        <a id="topArrow" href="#top">
+            <span class="icon is-large">
+                <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+            </span>
+        </a>
+
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.html">
+                            <img src="images/Lta.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                            <a class="navbar-item" href="index.html">Home</a>
+                            <a class="navbar-item" href="aboutus.html">About Us</a>
+                            <a class="navbar-item" href="annotations.html">Annotations</a>
+                            <a class="navbar-item" href="dashboard.html">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero is-fullheight-with-navbar">
+            <div class="hero-body has-background">
+                <div class="container">
+                    <div class="columns is-centered is-vcentered">
+                        <div class="column is-one-third-widescreen is-7 is-12-mobile">
+                            <section class="box">
+                                <section class="section">
+                                    <h1 class="title">Login</h1>
+                                    <h6 class="subtitle">Continue to Annotator</h6>
+                                </section>
+                                <form action="#">
+                                    <div class="field">
+                                        <label class="label">E-Mail Address</label>
+                                        <p class="control is-expanded has-icons-left">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fas fa-envelope"></i>
+                                            </span>
+                                            <input class="input" type="email" name="email" placeholder="E-Mail Address"
+                                                autofocus="" required>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Password</label>
+                                        <div class="field has-addons">
+                                            <div class="control is-expanded has-icons-left">
+                                                <span class="icon is-small is-left">
+                                                    <i class="fa fas fa-key"></i>
+                                                </span>
+                                                <input class="input" type="password" name="password"
+                                                    placeholder="Password" id="password" autofocus="" required>
+                                            </div>
+                                            <div class="control">
+                                                <button class="button" data-visibility data-target="password">
+                                                    <span class="icon is-small">
+                                                        <i class="fa fas fa-eye"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                                            <div class="field">
+                                                <input type="checkbox" id="remember" class="is-checkradio is-primary"
+                                                    name="remember">
+                                                <label for="remember">Remember Me</label>
+                                            </div>
+                                            <div class="field pt-0">
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field mt-5">
+                                        <p class="control is-expanded">
+                                            <button class="button is-primary is-fullwidth">
+                                                LOGIN
+                                            </button>
+                                        </p>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <p class="control">New User?</p>
+                                        <p class="control">
+                                            <a href="signup.html">Sign Up</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+                <footer class="footer">
+                    <div class="content has-text-centered has-text-black">
+                        <p>
+                            © 2022 Department of Computer Science, Delhi University
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <script src="scripts/navbar.js"></script>
+        <script src="scripts/login_signup.js"></script>
+        <script src="scripts\toparrowpage.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Docs Log</title>
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Extensions Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css" <!-- Icon Font
+      Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css\dashboard.css">
+    <link rel="stylesheet" href="css\toppage.css">
+    <link rel="stylesheet" href="css\tables.css" />
+
+  </head>
+
+  <body class="has-background-white">
+
+    <a id="topArrow" href="#top">
+      <span class="icon is-large">
+        <i class="fa fas fa-2x fa-arrow-circle-up" aria-hidden="true"></i>
+      </span>
+    </a>
+
+    <header>
+      <nav class="navbar has-shadow">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+              <img src="images/Lta.png" alt="Logo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+              <a class="navbar-item" href="index.html">Home</a>
+              <a class="navbar-item" href="aboutus.html">About Us</a>
+              <a class="navbar-item" href="annotations.html">Annotations</a>
+              <a class="navbar-item has-text-weight-bold" href="dashboardadmin.html">Dashboard</a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-light">LOGOUT<i class="material-icons" aria-hidden="true">exit_to_app</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="side-bar-container block">
+      <section class="side-bar has-background-white mt-1 mb-0 ml-1 mr-1">
+        <nav class="is-info">
+          <p class="panel-heading has-background-info has-text-white">
+            Menu
+          </p>
+          <a class="panel-block" href="dashboardadmin.html">
+            <span class="panel-icon">
+              <i class="material-icons" aria-hidden="true">person_outline</i>
+            </span>
+            Profile
+          </a>
+          <a class="panel-block " href="usersadmin.html">
+            <span class="panel-icon">
+              <i class="fa fas fa-users" aria-hidden="true"></i>
+            </span>
+            Users Log
+          </a>
+          <a class="panel-block is-active has-text-weight-bold has-text-info" href="docsadmin.html">
+            <span class="panel-icon">
+              <i class="fa fas fa-file" aria-hidden="true"></i>
+            </span>
+            Documents Log
+          </a>
+          <a class="panel-block" href="activityadmin.html">
+            <span class="panel-icon">
+              <i class="material-icons" aria-hidden="true">sort</i>
+            </span>
+            Statistics
+          </a>
+        </nav>
+      </section>
+      <article class="content-area ">
+        <article class="container">
+          <section class="block">
+            <section class="hero has-background-info mt-1 ml-1 mr-1 mb-0">
+              <nav class="level">
+                <div class="level-left">
+                  <p class="panel-heading has-background-info has-text-white">
+                    Documents Log
+                  </p>
+                </div>
+
+                <div class="level-right mr-1">
+                  <div class="field has-addons">
+                    <div class="control is-fluid">
+                      <input class="input" type="text" placeholder="Search by...">
+                    </div>
+                    <div class="control">
+                      <a class="button is-grey">
+                        Search
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </section>
+          </section>
+          <article class="container is-fluid p-1">
+            <!-- DOCUMENTS -->
+            <div class="card has-table">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="icon"><i class="mdi mdi-database"></i></span>
+                  DOCUMENTS
+                </p>
+                <a href="#" class="card-header-icon">
+                  <span class="icon"><i class="mdi mdi-reload"></i></span>
+                </a>
+              </header>
+              <div class="card-content">
+                <div class="table-wrapper has-mobile-cards">
+                  <table class="table is-fullwidth is-striped is-hoverable has-text-left">
+                    <thead>
+                      <tr>
+                        <th>S.No</th>
+                        <th>Document Name</th>
+                        <th><span class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                            data-tooltip="Total Number of Paragraphs">P.No</abbr></th>
+                        <th><span class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                            data-tooltip="Total Number of Paragraphs Labelled">L.No</abbr></th>
+                        <th><span class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                            data-tooltip="Total Number of Paragraphs Modified">M.No</abbr></th>
+                        <th><span class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                            data-tooltip="Total Number of Paragraphs Bypassed">B.No</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">1</td>
+                        <td data-label="Name">Lorum ipsum dolem aire</td>
+                        <td data-label="P.No">10</td>
+                        <td data-label="L.No">3</td>
+                        <td data-label="M.No">2</td>
+                        <td data-label="B.No">1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Pagination Nav -->
+              <nav class="pagination is-centered mt-4" role="navigation" aria-label="pagination">
+                <a class="pagination-previous has-background-white">
+                  <span class="icon is-small">
+                    <i class="fa fas fa-chevron-left"></i>
+                  </span>
+                </a>
+                <a class="pagination-next has-background-white">
+                  <span class="icon is-small">
+                    <i class="fa fas fa-chevron-right"></i>
+                  </span>
+                </a>
+                <ul class="pagination-list">
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 1">1</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 45">45</a></li>
+                  <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 47">47</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link has-background-white" aria-label="Goto page 86">86</a></li>
+                </ul>
+              </nav>
+            </div>
+          </article>
+        </article>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>© 2022 Department of Computer Science, Delhi University</p>
+      </div>
+
+    </footer>
+
+    <script src="scripts\navbar.js"></script>
+    <script src="scripts\toparrowpage.js"></script>
+
+  </body>
+
+</html>
