@@ -80,6 +80,12 @@
                         </span>
                         Profile
                     </a>
+                    <a class="panel-block" href="password.html">
+                        <span class="panel-icon">
+                            <i class="fa fas fa-lock" aria-hidden="true"></i>
+                        </span>
+                        Change Password
+                    </a>
                     <a class="panel-block is-active has-text-weight-bold has-text-info" href="tasks.html">
                         <span class="panel-icon">
                             <i class="fa fas fa-book" aria-hidden="true"></i>
@@ -115,6 +121,7 @@
                                                 <option>Labelled</option>
                                                 <option>Modified</option>
                                                 <option>Bypassed</option>
+                                                <option>Time's Up</option>
                                                 <option>Label 1</option>
                                                 <option>Label 2</option>
                                                 <option>Label 3</option>
@@ -226,6 +233,13 @@
                                         </span>
                                         <span>Modify</span>
                                     </button>
+                                    <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
+                                    data-target="modal_details">
+                                        <span class="icon is-small">
+                                            <i class="fa fas fa-eye"></i>
+                                        </span>
+                                        <span>Paragraph Details</span>
+                                    </button>
                                 </div>
                             </div>
                         </section>
@@ -270,49 +284,12 @@
                                         </span>
                                         <span>Modify</span>
                                     </button>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="box">
-                            <section class="block">
-                                Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat
-                                consetetur, vocent expetendis sit at. Posse populo no usu
-                                <span class="dots">...</span>
-                                <span class="more">
-                                    Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit
-                                    postea nusquam id. Ad nec unum velit, ad lorem primis officiis vis. Eam appareat
-                                    pericula consequuntur an, atqui saperet his eu, cum prompta fabellas interpretaris
-                                    et.
-                                </span>
-                                <button class="read is-text has-text-link p-0">
-                                    <span>Read More</span>
-                                </button>
-                            </section>
-                            <div class="columns is-vcentered">
-                                <div class="column is-narrow">
-                                    <span class="tag is-info is-light is-medium">
-                                        MODIFIED
-                                    </span>
-                                </div>
-                                <div class="column">
-                                    <div class="tags is-multiline">
-                                        <span class="tag is-primary is-light is-medium">
-                                            Label 1
-                                        </span>
-                                        <span class="tag is-primary is-light is-medium">
-                                            Label 2
-                                        </span>
-                                        <span class="tag is-primary is-light is-medium">
-                                            Label 3
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
+                                    data-target="modal_details">
                                         <span class="icon is-small">
-                                            <i class="fa fas fa-edit"></i>
+                                            <i class="fa fas fa-eye"></i>
                                         </span>
-                                        <span>Modify</span>
+                                        <span>Paragraph Details</span>
                                     </button>
                                 </div>
                             </div>
@@ -358,6 +335,13 @@
                                         </span>
                                         <span>Modify</span>
                                     </button>
+                                    <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
+                                    data-target="modal_details">
+                                        <span class="icon is-small">
+                                            <i class="fa fas fa-eye"></i>
+                                        </span>
+                                        <span>Paragraph Details</span>
+                                    </button>
                                 </div>
                             </div>
                         </section>
@@ -402,9 +386,87 @@
                                         </span>
                                         <span>Modify</span>
                                     </button>
+                                    <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
+                                    data-target="modal_details">
+                                        <span class="icon is-small">
+                                            <i class="fa fas fa-eye"></i>
+                                        </span>
+                                        <span>Paragraph Details</span>
+                                    </button>
                                 </div>
                             </div>
                         </section>
+                        <section class="box">
+                            <section class="block">
+                                Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat
+                                consetetur, vocent expetendis sit at. Posse populo no usu
+                                <span class="dots">...</span>
+                                <span class="more">
+                                    Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit
+                                    postea nusquam id. Ad nec unum velit, ad lorem primis officiis vis. Eam appareat
+                                    pericula consequuntur an, atqui saperet his eu, cum prompta fabellas interpretaris
+                                    et.
+                                </span>
+                                <button class="read is-text has-text-link p-0">
+                                    <span>Read More</span>
+                                </button>
+                            </section>
+                            <div class="columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <span class="tag is-info is-light is-medium">
+                                        MODIFIED
+                                    </span>
+                                </div>
+                                <div class="column">
+                                    <div class="tags is-multiline">
+                                        <span class="tag is-primary is-light is-medium">
+                                            Label 1
+                                        </span>
+                                        <span class="tag is-primary is-light is-medium">
+                                            Label 2
+                                        </span>
+                                        <span class="tag is-primary is-light is-medium">
+                                            Label 3
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="column is-narrow">
+                                    <button class="button is-primary">
+                                        <span class="icon is-small">
+                                            <i class="fa fas fa-edit"></i>
+                                        </span>
+                                        <span>Modify</span>
+                                    </button>
+                                    <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
+                                    data-target="modal_details">
+                                        <span class="icon is-small">
+                                            <i class="fa fas fa-eye"></i>
+                                        </span>
+                                        <span>Paragraph Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- MODAL_DETAILS -->
+                        <div class="modal p-2" id="modal_details">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title has-text-info-dark">Paragraph Details</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body has-text-left">
+                                    <p class="subtitle has-text-info"><a href="">Document Link</a></p>
+                                        <strong>Document Number: </strong><br>
+                                        <strong>Case Number: </strong><br>
+                                        <strong>Title: </strong><br>
+                                        <strong>Date of the Judgement: </strong><br>
+                                </section>
+                            </div>
+                        </div>
+
+
                         <!-- Pagination Nav -->
                         <nav class="pagination is-centered" role="navigation" aria-label="pagination">
                             <a class="pagination-previous has-background-white">
@@ -446,6 +508,7 @@
         <script src="scripts\navbar.js"></script>
         <script src="scripts\toparrowpage.js"></script>
         <script src="scripts\readmore.js"></script>
+        <script src="scripts\modal.js"></script>
 
     </body>
 
