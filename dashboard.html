@@ -77,6 +77,12 @@
                         </span>
                         Profile
                     </a>
+                    <a class="panel-block" href="password.html">
+                        <span class="panel-icon">
+                            <i class="fa fas fa-lock" aria-hidden="true"></i>
+                        </span>
+                        Change Password
+                    </a>
                     <a class="panel-block" href="tasks.html">
                         <span class="panel-icon">
                             <i class="fa fas fa-book" aria-hidden="true"></i>
@@ -175,95 +181,11 @@
                                     <input type="submit" class="button is-primary is-hidden" id="save" hidden
                                         value="Save">
                                 </div>
-                                <div class="control">
-                                    <button class="button is-primary js-modal-trigger" id="change_passwd"
-                                        data-target="password-modal">Change Password</button>
-                                </div>
                             </div>
                         </form>
                     </section>
                 </article>
             </article>
-
-            <div class="modal" id="password-modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title">Change Current Password</p>
-                        <button class="delete" aria-label="close"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <div class="container is-fluid">
-                            <form action="#" method="POST">
-                                <div class="field">
-                                    <label class="label">Current Password</label>
-                                    <div class="field has-addons">
-                                        <div class="control is-expanded has-icons-left">
-                                            <span class="icon is-small is-left">
-                                                <i class="fa fas fa-key"></i>
-                                            </span>
-                                            <input class="input" type="password" name="old_password"
-                                                placeholder="Current (Old) Password" id="old_password" required>
-                                        </div>
-                                        <div class="control">
-                                            <button class="button" data-visibility data-target="old_password">
-                                                <span class="icon is-small">
-                                                    <i class="fa fas fa-eye"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label class="label">New Password</label>
-                                    <div class="field has-addons">
-                                        <div class="control is-expanded has-icons-left">
-                                            <span class="icon is-small is-left">
-                                                <i class="fa fas fa-key"></i>
-                                            </span>
-                                            <input class="input" type="password" name="new_password"
-                                                placeholder="New Password" id="new_password" required>
-                                        </div>
-                                        <div class="control">
-                                            <button class="button" data-visibility data-target="new_password">
-                                                <span class="icon is-small">
-                                                    <i class="fa fas fa-eye"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label class="label">Confirm New Password</label>
-                                    <div class="field has-addons">
-                                        <div class="control is-expanded has-icons-left">
-                                            <span class="icon is-small is-left">
-                                                <i class="fa fas fa-key"></i>
-                                            </span>
-                                            <input class="input" type="password" name="confirm_new_password"
-                                                placeholder="Confirm New Password" id="confirm_new_password" required>
-                                        </div>
-                                        <div class="control">
-                                            <button class="button" data-visibility data-target="confirm_new_password">
-                                                <span class="icon is-small">
-                                                    <i class="fa fas fa-eye"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field is-grouped is-grouped-right mt-5">
-                                    <div class="control">
-                                        <button class="button is-primary">
-                                            Change Password
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </section>
-                </div>
-            </div>
         </section>
 
         <footer class="footer">
@@ -272,7 +194,6 @@
             </div>
         </footer>
 
-        <script src="scripts\modal.js"></script>
         <script src="scripts\profile.js"></script>
         <script src="scripts\navbar.js"></script>
         <script src="scripts\toparrowpage.js"></script>
