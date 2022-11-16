@@ -13,6 +13,8 @@
         <!-- Extensions Css -->
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css">
         <!-- Icon Font Css -->
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,6 +27,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css\dashboard.css">
+        <link rel="stylesheet" href="css\paragraphs.css">
         <link rel="stylesheet" href="css\toppage.css">
 
     </head>
@@ -100,7 +103,7 @@
                     </a>
                 </nav>
             </section>
-            
+
             <article class="content-area ">
                 <article class="container">
                     <section class="block">
@@ -227,14 +230,14 @@
                                     </div>
                                 </div>
                                 <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-primary js-modal-trigger" data-target="label_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-edit"></i>
                                         </span>
                                         <span>Modify</span>
                                     </button>
                                     <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
-                                    data-target="modal_details">
+                                        data-target="modal_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-eye"></i>
                                         </span>
@@ -278,14 +281,14 @@
                                     </div>
                                 </div>
                                 <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-primary js-modal-trigger" data-target="label_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-edit"></i>
                                         </span>
                                         <span>Modify</span>
                                     </button>
                                     <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
-                                    data-target="modal_details">
+                                        data-target="modal_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-eye"></i>
                                         </span>
@@ -329,14 +332,14 @@
                                     </div>
                                 </div>
                                 <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-primary js-modal-trigger" data-target="label_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-edit"></i>
                                         </span>
                                         <span>Modify</span>
                                     </button>
                                     <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
-                                    data-target="modal_details">
+                                        data-target="modal_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-eye"></i>
                                         </span>
@@ -380,14 +383,14 @@
                                     </div>
                                 </div>
                                 <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-primary js-modal-trigger" data-target="label_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-edit"></i>
                                         </span>
                                         <span>Modify</span>
                                     </button>
                                     <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
-                                    data-target="modal_details">
+                                        data-target="modal_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-eye"></i>
                                         </span>
@@ -431,14 +434,14 @@
                                     </div>
                                 </div>
                                 <div class="column is-narrow">
-                                    <button class="button is-primary">
+                                    <button class="button is-primary js-modal-trigger" data-target="label_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-edit"></i>
                                         </span>
                                         <span>Modify</span>
                                     </button>
                                     <button class="button is-info has-text-white has-text-weight-bold js-modal-trigger"
-                                    data-target="modal_details">
+                                        data-target="modal_details">
                                         <span class="icon is-small">
                                             <i class="fa fas fa-eye"></i>
                                         </span>
@@ -458,13 +461,121 @@
                                 </header>
                                 <section class="modal-card-body has-text-left">
                                     <p class="subtitle has-text-info"><a href="">Document Link</a></p>
-                                        <strong>Document Number: </strong><br>
-                                        <strong>Case Number: </strong><br>
-                                        <strong>Title: </strong><br>
-                                        <strong>Date of the Judgement: </strong><br>
+                                    <strong>Document Number: </strong><br>
+                                    <strong>Case Number: </strong><br>
+                                    <strong>Title: </strong><br>
+                                    <strong>Date of the Judgement: </strong><br>
                                 </section>
                             </div>
                         </div>
+
+                        <div class="modal p-2" id="label_details">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title has-text-info-dark">Labels</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body has-text-left">
+                                    <p class="subtitle has-text-info">You can select multiple labels</p>
+                                    <div id="labelcontainer" class="content is-fullheight">
+                                        <div class="content rows">
+                                            <div class="checkitems">
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-1" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-1"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-2" class="is-checkradio is-info"
+                                                        name="labels" />
+                                                    <label for="label-2"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-3" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-3"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-4" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-4"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-5" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-5"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-6" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-6"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-7" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-7"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-8" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-8"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-9" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-9"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-10" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-10"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-11" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-11"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                                <div class="checkitem">
+                                                    <input type="checkbox" id="label-12" class="is-checkradio is-link"
+                                                        name="labels" />
+                                                    <label for="label-12"><span
+                                                            class="has-tooltip-arrow has-tooltipl-multiline has-tooltip-info"
+                                                            data-tooltip="Tooltip content&#10;tooltip content">Label1</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttons is-centered">
+                                            <button class="button is-primary js-modal-trigger" id="para_annotate"
+                                                data-target="paragraph1-modal">SUBMIT</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
 
 
                         <!-- Pagination Nav -->
